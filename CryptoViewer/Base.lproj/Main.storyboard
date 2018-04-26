@@ -79,7 +79,8 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVl-aO-fik">
-                                <rect key="frame" x="150" y="313.5" width="75" height="34"/>
+                                <rect key="frame" x="120" y="313.5" width="135" height="34"/>
+                                <color key="backgroundColor" red="0.70959293842315674" green="0.86470341682434082" blue="0.67757487297058105" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="Refresh">
@@ -109,9 +110,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dGZ-CA-5Bh" secondAttribute="trailing" constant="16" id="Efe-TF-T8F"/>
                             <constraint firstItem="9xk-mu-5GT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Lca-Oi-egb"/>
                             <constraint firstItem="9xk-mu-5GT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="M8X-Bi-yxG"/>
-                            <constraint firstItem="yVl-aO-fik" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="QHQ-UL-MYZ"/>
+                            <constraint firstItem="yVl-aO-fik" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="QHQ-UL-MYZ"/>
                             <constraint firstItem="14X-BX-tcr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="169" id="TbO-XU-pfI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yVl-aO-fik" secondAttribute="trailing" constant="150" id="qxy-TB-Oz0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yVl-aO-fik" secondAttribute="trailing" constant="120" id="qxy-TB-Oz0"/>
                             <constraint firstItem="dGZ-CA-5Bh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="xdG-B6-fI1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

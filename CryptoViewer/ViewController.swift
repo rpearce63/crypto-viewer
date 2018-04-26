@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     var currentPrice: Double = 0
     var balance: Double = 0
     var balances: [Double] = []
+    let decoder = JSONDecoder()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +42,8 @@ class ViewController: UIViewController {
         Alamofire.request(CURRENT_PRICE_URL).responseJSON { (response) in
             if response.result.error == nil {
                 if let json: Data = response.data {
-                    let decoder = JSONDecoder()
-                    let result = try! decoder.decode(XRPPrice.self, from: json)
+                    //let decoder = JSONDecoder()
+                    let result = try! self.decoder.decode(XRPPrice.self, from: json)
                     self.currentPrice = Double(result.last)!
                     self.fetchCurrentBalance()
                 }
@@ -66,8 +67,8 @@ class ViewController: UIViewController {
             if response.result.error == nil {
                 //print(response.result.value.debugDescription)
                 if let jsonResponse: Data = response.data {
-                    let decoder = JSONDecoder()
-                    let result = try! decoder.decode(BitStampAccount.self, from: jsonResponse)
+                    //let decoder = JSONDecoder()
+                    let result = try! self.decoder.decode(BitStampAccount.self, from: jsonResponse)
                     self.balance += Double(result.xrp_balance)!
                     self.fetchToastWalletData()
                 }
@@ -83,8 +84,8 @@ class ViewController: UIViewController {
         Alamofire.request("https://data.ripple.com/v2/accounts/rNwwnwdG9Sum9vRMfREWMUjtSDxXCgM59H/balances").responseJSON { (response) in
             if response.result.error == nil {
                 if let jsonResponse : Data = response.data {
-                    let decoder = JSONDecoder()
-                    let result = try! decoder.decode(Account.self, from: jsonResponse)
+                    //let decoder = JSONDecoder()
+                    let result = try! self.decoder.decode(Account.self, from: jsonResponse)
                     let currentBalance = Double(result.balances[0].value)
                     self.balance += currentBalance!
                 }
